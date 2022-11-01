@@ -1,4 +1,17 @@
+html {
+    --card-color: rgb(218, 218, 218);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
+    flex: 1 1 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
@@ -6,12 +19,79 @@
 
 .sidebar {
     grid-area: 1 / 1 / 3;
+    background-color: aqua;
 }
 
 .header {
     grid-area: 1 / 2;
 }
 
-.content {
+.container .content {
     grid-area: 2 / 2;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 20px 50px 0px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 1 / 3;
+    padding: 0px 20px;
+}
+
+.announcements {
+    grid-area: 1 / 2;
+    padding-bottom: 30px;
+}
+
+.trending {
+    grid-area: 2 / 2;
+}
+
+.title-content {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.projects .card-container {
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-container .card {
+    background-color: var(--card-color);
+}
+
+.card {
+    padding: 20px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+.annoucement-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+}
+
+.annoucement-content .card {
+    flex: 1 1 0;
+}
+
+.announcements .border {
+    width: 85%;
+    flex: 0 0 1px;
+    background-color: black;
 }
