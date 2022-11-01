@@ -81,8 +81,6 @@ body {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--card-color);
 }
 
@@ -91,7 +89,25 @@ body {
 }
 
 .announcements .border {
-    width: 85%;
+    align-self: center;
+    width: calc(100% - 40px);
     flex: 0 0 1px;
     background-color: black;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-color);
+}
+
+.trending-content .account {
+    flex: 1 1 0;
+    padding: 0 20px;
 }
