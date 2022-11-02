@@ -1,5 +1,5 @@
 html {
-    --light-color: #ecfeff;
+    --light-color: #fff;
     --dark-color: #164e63;
     --light-dark-color: #155e75;
     --sidebar-color: #0891b2;
@@ -33,6 +33,24 @@ body {
 .header {
     grid-area: 1 / 2;
     background-color: var(--light-color);
+}
+
+.header,
+.card-container .card,
+.announcement-content,
+.trending-content {
+    box-shadow: 0 0.4rem 0.7rem 0 rgba(0, 0, 0, 0.116);
+    z-index: 1;
+}
+
+.card-container .card,
+.announcement-content,
+.trending-content {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .container .content {
@@ -147,7 +165,7 @@ a {
     font-weight: bold;
     color: var(--dark-color);
 }
-.description {
+.description, .account div {
     color: var(--light-dark-color)
 }
 
