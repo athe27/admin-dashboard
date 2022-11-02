@@ -1,6 +1,7 @@
 html {
     --light-color: #ecfeff;
     --dark-color: #164e63;
+    --light-dark-color: #155e75;
     --sidebar-color: #0891b2;
     --content-background-color: #cffafe;
 }
@@ -135,8 +136,58 @@ ul .child, .logo {
 
 ul .child {
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
+}
+
+.title {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+.description {
+    color: var(--light-dark-color)
+}
+
+.projects .title {
+    font-size: 1.3rem;
+}
+
+.projects .description {
+    font-size: 1.1rem;
+}
+
+.announcements .title {
+    font-size: 1.1rem;
+}
+
+.top-section {
+    display: flex;
+}
+
+#search-bar {
+    color: var(--dark-color);
+    background-color: var(--content-background-color);
+    border: none;
+    outline: none;
+}
+
+.bottom-section {
+    display: flex;
+}
+
+button {
+    background-color: var(--sidebar-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
