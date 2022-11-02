@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/Roboto/Roboto-Regular.ttf)
+}
+
 html {
     --light-color: #fff;
     --dark-color: #164e63;
@@ -12,17 +17,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto';
 }
 
 .container {
     flex: 1 1 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
-    grid-area: 1 / 1 / 3;
     background-color: var(--sidebar-color);
     display: flex;
     flex-direction: column;
@@ -30,9 +34,19 @@ body {
     padding: 1rem;
 }
 
+.name {
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.leftbar {
+    display: flex;
+    flex-direction: column;
+}
+
 .header {
-    grid-area: 1 / 2;
     background-color: var(--light-color);
+    flex: 0;
 }
 
 .header,
@@ -54,12 +68,12 @@ body {
 }
 
 .container .content {
-    grid-area: 2 / 2;
     background-color: var(--content-background-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 1rem 1rem 3rem 0;
+    flex: 1;
 }
 
 .projects {
@@ -183,6 +197,9 @@ a {
 
 .top-section {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 #search-bar {
@@ -190,10 +207,38 @@ a {
     background-color: var(--content-background-color);
     border: none;
     outline: none;
+    flex: 1;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    height: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 10rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
 }
 
 .bottom-section {
     display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.greeting {
+    flex: 1;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.greeting :nth-child(2) {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
 }
 
 button {
@@ -208,4 +253,36 @@ button {
     -o-border-radius: 1rem;
     font-weight: bold;
     font-size: 1rem;
+}
+
+.profile-pic, .profile-picture {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.top-section .profile-picture, .profile-pic {
+    width: 3rem;
+    height: auto;
+}
+
+.bottom-section .profile-picture {
+    width: 4rem;
+    height: auto;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info :first-child {
+    font-weight: bold;
 }
